@@ -1,4 +1,4 @@
-import { Octokit } from "octokit";
+import { Octokit } from "@octokit/rest";
 
 let octokit: Octokit;
 
@@ -9,5 +9,3 @@ export function getOctokitClient(accessToken?: string): Octokit {
 
 	return octokit;
 }
-
-export async function getIssues() {}
