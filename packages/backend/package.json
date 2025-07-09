@@ -23,6 +23,7 @@
     "typescript": "~5.6.3"
   },
   "dependencies": {
+    "@aws-cdk/aws-lambda-python-alpha": "2.202.0-alpha.0",
     "@aws-sdk/client-ssm": "^3.806.0",
     "@octokit/rest": "^21.1.1",
     "aws-cdk-lib": "2.177.0",

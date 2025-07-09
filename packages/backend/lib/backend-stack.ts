@@ -1,6 +1,7 @@
 import * as cdk from "aws-cdk-lib";
 
 import type { Construct } from "constructs";
+import { EtlConstruct } from "./constructs/etl-construct";
 import { RestApiConstruct } from "./constructs/rest-api-construct";
 
 interface BackendStackOptions extends cdk.StackProps {
@@ -17,6 +18,8 @@ export class BackendStack extends cdk.Stack {
 		super(scope, id, props);
 
 		new RestApiConstruct(this, "restApi", { githubClientId, githubSecret });
+
+		new EtlConstruct(this, "etlConstruct");
 
 		// database construct here at some point
 	}
